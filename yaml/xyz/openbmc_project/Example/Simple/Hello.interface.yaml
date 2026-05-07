@@ -1,0 +1,24 @@
+description: >
+    A minimal example D-Bus interface.
+
+properties:
+    - name: Enabled
+      type: boolean
+      description: >
+          Whether this example object is enabled.
+      default: false
+
+methods:
+    - name: Ping
+      description: >
+          Return the supplied message.
+      parameters:
+          - name: Message
+            type: string
+            description: >
+                Message to return.
+      returns:
+          - name: Reply
+            type: string
+            description: >
+                Returned message.

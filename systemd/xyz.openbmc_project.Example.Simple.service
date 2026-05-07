@@ -1,0 +1,12 @@
+[Unit]
+Description=Minimal sdbusplus Hello example service
+After=dbus.service
+
+[Service]
+Type=dbus
+BusName=xyz.openbmc_project.Example.Simple
+ExecStart=/usr/local/bin/hello-service
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
